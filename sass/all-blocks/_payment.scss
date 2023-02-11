@@ -1,0 +1,45 @@
+.payment {
+    @include div-functions;
+    @include for-tablet {
+        // padding: 0 40px;
+        margin: 0 auto;
+    }
+    @include for-phone {
+        flex-direction: column;
+    }
+    column-gap: 30px;
+    margin-bottom: 100px;
+    &__item {
+        text-align: center;
+    }
+    &__img {
+        max-width: 106px;
+        object-fit: cover;
+        margin-bottom: 32px;
+        @include for-tablet {
+            max-width: 88px;
+            margin-top: 100px;
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+        color: $color-3;
+        max-width: 350px;
+        @include for-tablet {
+            max-width: 223px;
+        }
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+        color: #6C8294;
+        margin-top: 16px;
+        @include for-tablet {
+            max-width: 223px;
+            min-height: 125px;
+        }
+    }
+}

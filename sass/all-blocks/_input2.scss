@@ -1,0 +1,70 @@
+.inputs {
+    display: flex;
+    justify-content: space-between;
+    @include for-tablet {
+        flex-direction: column;
+        text-align: center;
+    }
+    @include for-phone {
+        flex-direction: column;
+    }
+    &__form {
+        position: relative;
+    }
+    &__title {
+        font-family: 'DM Serif Display';
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 56px;
+        color: $text-color;
+        @include for-tablet {
+            margin: 100px 0 40px 0;
+        }
+        @include for-phone {
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 36px;
+            color: $text-color;
+        }
+    }
+    &__inp {
+        padding: 16px 276px 14px 27px;
+        background: #FBFCFE;
+        box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+        border-radius: 24px;
+        border: transparent;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        color: $text-color;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+        @include for-tablet {
+            margin-bottom: 100px;
+        }
+        @include for-phone {
+            width: 100%;
+        }
+    }
+    &__btn {
+        padding: 15px 25px;
+        background: $color-1;
+        border-radius: 24px;
+        border: transparent;
+        color: white;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        position: absolute;
+        right: 0;
+        @include for-tablet {
+            right: 0px;
+        }
+        @include for-phone {
+            width: 100%;
+            left: 0;
+            top: 100px;
+            right: 0;
+        }
+    }
+}
