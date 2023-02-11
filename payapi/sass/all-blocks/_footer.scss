@@ -1,0 +1,53 @@
+.footers {
+    background-color: #1B262F;
+}
+
+.footer {
+    margin-top: 100px;
+    max-width: 1440px;
+    @include div-functions;
+    column-gap: 64px;
+    padding: 31px 0;
+    @include for-phone {
+        flex-direction: column;
+        padding-top: 41px;
+    }
+    &__logo {
+        max-width: 135px;
+        height: 38px;
+        object-fit: cover;
+    }
+    &__div {
+        width: 100%;
+        @include div-functions;
+        justify-content: space-between;
+        @include for-phone {
+            flex-direction: column;
+        }
+        &-img {
+            max-width: 24px;
+            height: 24px;
+            object-fit: cover;
+        }
+    }
+    &__ul {
+        @include div-functions;
+        column-gap: 40px;
+        @include for-phone {
+            margin: 40px 0 40px 0;
+            flex-direction: column;
+            row-gap: 31px;
+        }
+        &-a {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 18px;
+            color: #FBFCFE;
+            opacity: 0.7;
+        }
+    }
+    &__div-item {
+        @include div-functions;
+        column-gap: 24px;
+    }
+}
